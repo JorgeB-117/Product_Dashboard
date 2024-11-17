@@ -33,6 +33,8 @@ function App() {
     }
   ])
 
+// Task 7: Pass Data Between Components
+
   const addProduct = (newProduct) => {
     setProducts([...products, newProduct])
   }

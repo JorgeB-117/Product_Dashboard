@@ -40,3 +40,140 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: #0d8807; /* Green */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Style the main container */
+h1 {
+  color: #5a5959;
+  text-align: center;
+}
+
+/* Add container styles */
+.product-list {
+  background-color: #003c0b;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px auto; /* Center horizontally */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Increase width */
+  max-width: 1000px;
+}
+
+.product-list h2 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-product-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1000px;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #f16c6c;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.1);
+}
+
+.submit-button {
+  background-color: hsl(0, 52%, 57%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #5867f7;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.remove-btn {
+  background-color: #f76969;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-description {
+  text-align: center;
+  color: #666;
+}
+
+.product-info {
+  width: 100%;
+  padding: 10px;
+}
