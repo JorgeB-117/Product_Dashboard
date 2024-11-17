@@ -1,36 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import ProductList from './Components/ProductList/ProductList'
+import AddProductForm from './Components/AddProductForm/AddProductForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      name: "Macbook Pro",
+      price: 1299.99,
+      description: "Most powerful laptop"
+    },
+    {
+      id: 2,
+      name: "Airpods",
+      price: 179.99,
+      description: "Earbuds with noise cancellation"
+    },
+    {
+      id: 3,
+      name: "iPhone",
+      price: 949.99,
+      description: "Most powerful phone"
+    },
+    {
+      id: 4,
+      name: "iPad",
+      price: 729.99,
+      description: "Best for Education"
+    }
+  ])
+
+  const addProduct = (newProduct) => {
+    setProducts([...products, newProduct])
+  }
+
+  const removeProduct = (productId) => {
+    setProducts(products.filter(product => product.id !== productId))
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='app-container'>
+      <h1>Product Dashboard</h1>
+      <AddProductForm addProduct={addProduct} />
+      <ProductList 
+        products={products}
+        removeProduct={removeProduct}
+      />
+    </div>
   )
 }
 
 export default App
-
