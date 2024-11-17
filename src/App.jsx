@@ -1,3 +1,5 @@
+// Task 2: Create the App Component
+
 import React, { useState } from 'react'
 import './App.css'
 import ProductList from './Components/ProductList/ProductList'
