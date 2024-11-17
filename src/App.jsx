@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import './App.css'
-import ProductList from './Components/ProductList/ProductList'
-import AddProductForm from './Components/AddProductForm/AddProductForm'
+import ProductList from '/Users/jorgebernal/Desktop/Product_Dashboard/src/assets/Components/Components/ProductList/ProductList.jsx'
+import AddProductForm from '/Users/jorgebernal/Desktop/Product_Dashboard/src/assets/Components/Components/AddProductForm/AddProductForm.jsx'
 
 function App() {
   const [products, setProducts] = useState([
